@@ -6,6 +6,8 @@ import AddHoldingModal from "../components/portfolio/AddHoldingModal";
 import SummaryCards from "../components/dashboard/SummaryCards";
 import PortfolioChart from "../components/dashboard/PortfolioChart";
 import { usePortfolio } from "../hooks/usePortfolio";
+import { Button } from "../components/ui";
+import { HiOutlinePlus } from "react-icons/hi2";
 import "./PortfolioPage.css";
 
 function PortfolioPage() {
@@ -32,8 +34,16 @@ function PortfolioPage() {
 
                 <div className="portfolio-grid">
                     <div className="ui-table-panel portfolio-table-panel">
-                        <div className="ui-table-panel__header">
+                        <div className="ui-table-panel__header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
                             <h2 className="ui-table-panel__title">Your holdings</h2>
+                            <Button
+                                variant="primary"
+                                size="sm"
+                                onClick={() => setModalOpen(true)}
+                                icon={<HiOutlinePlus size={16} />}
+                            >
+                                Add Holding
+                            </Button>
                         </div>
                         <HoldingsTable holdings={holdings} loading={loading} onDelete={handleDelete} />
                     </div>
