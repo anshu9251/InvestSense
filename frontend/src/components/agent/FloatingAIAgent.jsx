@@ -23,6 +23,7 @@ import {
     getQuote
 } from "../../api";
 import { useAuth } from "../../context/AuthContext";
+import { motion } from "framer-motion";
 import logoImg from "../../assets/LOGO.png";
 import "./FloatingAIAgent.css";
 
@@ -252,16 +253,27 @@ export default function FloatingAIAgent() {
 
     return (
         <div className="ai-floating-widget">
-            {/* 1 Round Type Circular Trigger Button */}
+            {/* Draggable & Sleek Circular AI Trigger Button */}
             {!isOpen && (
-                <button
+                <motion.button
+                    drag
+                    dragConstraints={{
+                        top: -(window.innerHeight - 140),
+                        bottom: 20,
+                        left: -(window.innerWidth - 70),
+                        right: 20,
+                    }}
+                    dragElastic={0.05}
+                    dragMomentum={false}
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.92 }}
                     className="ai-trigger-btn"
                     onClick={() => setIsOpen(true)}
-                    title="Open InvestSense AI Assistant"
+                    title="Drag anywhere or tap to open AI Assistant"
                 >
-                    <span className="ai-trigger-glow"></span>
                     <ActualBotIcon className="ai-trigger-icon" />
-                </button>
+                    <span className="ai-trigger-online-dot"></span>
+                </motion.button>
             )}
 
             {/* Expandable Chat Popup Panel */}
