@@ -1,0 +1,128 @@
+.markets-page {
+    width: 100%;
+}
+
+.markets-body {
+    padding: 24px 28px 60px;
+}
+
+.markets-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.markets-status {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.markets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.market-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.market-card:hover {
+    border-color: #363d4a;
+}
+
+.market-card.error {
+    opacity: 0.5;
+}
+
+.market-card-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.market-symbol {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.market-name {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.market-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.market-change {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.market-change.positive {
+    color: var(--positive);
+}
+
+.market-change.negative {
+    color: var(--negative);
+}
+
+.market-error {
+    font-size: 12px;
+    color: var(--negative);
+}
+
+.market-card.skeleton {
+    opacity: 0.4;
+}
+
+.market-loading-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.watchlist-toggle-btn {
+    margin-top: 6px;
+    padding: 7px 10px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s ease;
+}
+
+.watchlist-toggle-btn:hover:not(:disabled) {
+    background: var(--accent);
+    color: white;
+}
+
+.watchlist-toggle-btn.added {
+    border-color: var(--positive);
+    color: var(--positive);
+    cursor: default;
+}
+
+.watchlist-toggle-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

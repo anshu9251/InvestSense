@@ -1,0 +1,79 @@
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.holdings-table th {
+    text-align: left;
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.holdings-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #1c2128;
+    color: #d1d5db;
+    white-space: nowrap;
+}
+
+.holdings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.holdings-table tr:hover td {
+    background: #1a2029;
+}
+
+.symbol-cell {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sector-badge {
+    background: #1e2530;
+    color: #9ca3af;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.error-badge {
+    color: var(--negative);
+    font-size: 12px;
+    background: rgba(220, 38, 38, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--negative);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.delete-btn:hover {
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.table-status {
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+}

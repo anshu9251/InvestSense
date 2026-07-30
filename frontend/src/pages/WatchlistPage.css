@@ -1,0 +1,192 @@
+.watchlist-page {
+    width: 100%;
+}
+
+.watchlist-body {
+    padding: 24px 28px 60px;
+}
+
+.watchlist-add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.watchlist-add-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-panel);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.watchlist-add-form input:focus {
+    border-color: var(--accent);
+}
+
+.watchlist-add-form button {
+    padding: 12px 22px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.watchlist-add-form button:hover:not(:disabled) {
+    background: var(--accent-hover);
+}
+
+.watchlist-add-form button:disabled {
+    background: #3f3f6e;
+    cursor: not-allowed;
+}
+
+.watchlist-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.watchlist-status {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.watchlist-empty {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 50px 24px;
+    text-align: center;
+}
+
+.watchlist-empty-icon {
+    font-size: 32px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.watchlist-empty p {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.watchlist-empty-sub {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.watchlist-empty-sub a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.watchlist-empty-sub a:hover {
+    text-decoration: underline;
+}
+
+.watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.watch-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.watch-card:hover {
+    border-color: #363d4a;
+}
+
+.watch-card.error {
+    opacity: 0.5;
+}
+
+.watch-card-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.watch-symbol {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.watch-name {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.watch-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.watch-change {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.watch-change.positive {
+    color: var(--positive);
+}
+
+.watch-change.negative {
+    color: var(--negative);
+}
+
+.watch-error {
+    font-size: 12px;
+    color: var(--negative);
+}
+
+.watch-remove-btn {
+    margin-top: 4px;
+    padding: 7px 10px;
+    background: transparent;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: var(--negative);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.watch-remove-btn:hover:not(:disabled) {
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.watch-remove-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

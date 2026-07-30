@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+Backend/venv/
+**/venv/
+
+# Node
+node_modules/
+frontend/node_modules/
+**/node_modules/
+
+# Env files (sensitive)
+.env
+**/.env
+Backend/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Build outputs
+frontend/dist/
+dist/
+
+# OS/editor
+.vscode/
+.DS_Store

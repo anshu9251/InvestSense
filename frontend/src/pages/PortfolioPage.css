@@ -1,0 +1,20 @@
+.portfolio-body {
+  padding-top: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.portfolio-table-panel {
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
