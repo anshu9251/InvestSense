@@ -133,13 +133,7 @@
     border: 3px solid var(--border-color);
     border-top-color: var(--accent);
     border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    animation: insights-spin 0.8s linear infinite;
 }
 
 .research-error-card {
@@ -217,4 +211,35 @@
     line-height: 1.65;
     color: var(--text-primary);
     margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .research-hero {
+        padding: 16px 12px 6px;
+    }
+
+    .research-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-form-card {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .research-form-card button {
+        width: 100%;
+    }
+
+    .research-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .research-price-block {
+        text-align: left;
+    }
 }

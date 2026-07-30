@@ -140,3 +140,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-tertiary);
 }
+
+@media (max-width: 768px) {
+  .page-content,
+  .page-content-wide {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content,
+  .page-content-wide {
+    padding: var(--space-3);
+  }
+
+  .text-stat {
+    font-size: 24px;
+  }
+
+  .text-display {
+    font-size: 26px;
+  }
+}
+
+@keyframes insights-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

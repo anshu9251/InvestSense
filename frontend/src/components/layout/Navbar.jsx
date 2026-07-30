@@ -15,6 +15,7 @@ import { useAuth } from "../../context/AuthContext";
 import { useTheme } from "../../context/ThemeContext";
 import { getNotifications, getQuote } from "../../api";
 import { Avatar, Button } from "../ui";
+import logoImg from "../../assets/LOGO.png";
 import "./Navbar.css";
 
 function Navbar({ onAddHoldingClick, title, subtitle }) {
@@ -103,6 +104,10 @@ function Navbar({ onAddHoldingClick, title, subtitle }) {
     return (
         <header className="navbar">
             <div className="navbar__top">
+                <div className="navbar__mobile-brand">
+                    <img src={logoImg} alt="InvestSense Logo" className="navbar__mobile-logo" />
+                    <span className="navbar__mobile-title">InvestSense</span>
+                </div>
                 <div className="navbar__greeting">
                     <motion.h1
                         initial={{ opacity: 0, y: -8 }}

@@ -293,46 +293,6 @@
 
 @media (max-width: 1024px) {
   .sidebar {
-    top: 0;
-    left: 0;
-    bottom: auto;
-    width: 100% !important;
-    position: relative;
-    padding: var(--space-3);
-  }
-
-  .sidebar__inner {
-    border-radius: var(--radius-lg);
-  }
-
-  .sidebar--collapsed .sidebar__inner {
-    display: none;
-  }
-
-  .sidebar__nav {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: var(--space-2);
-  }
-
-  .sidebar__group {
-    display: flex;
-    gap: var(--space-1);
-  }
-
-  .sidebar__group-label,
-  .sidebar__footer,
-  .sidebar__collapse-btn {
-    display: none;
-  }
-
-  .sidebar__nav-item span:not(.sidebar__nav-indicator) {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
+    display: none !important;
   }
 }

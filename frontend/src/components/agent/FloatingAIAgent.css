@@ -78,11 +78,11 @@
 }
 
 @keyframes popupIn {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(20px) scale(0.95);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
@@ -507,11 +507,17 @@
     cursor: not-allowed;
 }
 
-@media (max-width: 480px) {
-    .ai-chat-panel {
-        width: calc(100vw - 32px);
+@media (max-width: 768px) {
+    .ai-trigger-btn {
+        bottom: 84px;
         right: 16px;
-        bottom: 16px;
-        height: 80vh;
+    }
+
+    .ai-chat-panel {
+        width: calc(100vw - 24px);
+        right: 12px;
+        bottom: 84px;
+        height: 75vh;
+        max-height: 540px;
     }
 }

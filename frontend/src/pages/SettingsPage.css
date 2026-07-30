@@ -138,3 +138,30 @@
 .logout-btn:hover {
     background: rgba(220, 38, 38, 0.1);
 }
+
+@media (max-width: 768px) {
+    .settings-body {
+        padding: 20px 16px 80px;
+    }
+
+    .profile-card {
+        padding: 16px;
+    }
+
+    .settings-section {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .settings-row-value {
+        align-self: flex-end;
+    }
+}
+

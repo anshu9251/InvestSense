@@ -190,3 +190,33 @@
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+@media (max-width: 768px) {
+    .watchlist-body {
+        padding: 16px 14px 80px;
+    }
+
+    .watchlist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .watch-card {
+        padding: 14px;
+    }
+
+    .watch-price {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .watchlist-add-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .watchlist-add-form button {
+        width: 100%;
+    }
+}
