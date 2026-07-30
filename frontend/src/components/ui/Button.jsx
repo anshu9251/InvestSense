@@ -23,6 +23,14 @@ export function Button({
     loading = false,
     ...props
 }) {
+    const renderIcon = () => {
+        if (!Icon) return null;
+        if (typeof Icon === "function") {
+            return <Icon size={size === "sm" ? 14 : 16} />;
+        }
+        return Icon;
+    };
+
     return (
         <motion.button
             className={`ui-btn ${variants[variant]} ${sizes[size]} ${className}`}
@@ -30,7 +38,7 @@ export function Button({
             disabled={loading || props.disabled}
             {...props}
         >
-            {Icon && <Icon size={size === "sm" ? 14 : 16} />}
+            {renderIcon()}
             {loading ? "Loading..." : children}
         </motion.button>
     );

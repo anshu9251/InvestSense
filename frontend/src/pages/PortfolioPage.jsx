@@ -40,7 +40,7 @@ function PortfolioPage() {
                                 variant="primary"
                                 size="sm"
                                 onClick={() => setModalOpen(true)}
-                                icon={<HiOutlinePlus size={16} />}
+                                icon={HiOutlinePlus}
                             >
                                 Add Holding
                             </Button>
